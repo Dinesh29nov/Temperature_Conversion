@@ -38,12 +38,12 @@ def Convert():
     global input, vara
     if(request.method=='POST'): # match on the request is POST
         input=request.data #data format is string here
-        input.replace(" ","")
         if(input.isspace()):
             root = tk.Tk()  # to hide the root window 
             root.withdraw() 
             tkMessageBox.showinfo(title="Server-Warning!", message="User doesn't enter any value : ENTER SOME DATA INSTEAD OF SPACE")
             return redirect(url_for('Convert'))
+        input=input.replace(" ","")
         if(input!='' ): #checking value is not empty : Action No action
             lastindex=input[-1]
             if(lastindex=='f' or lastindex== 'F' ): #matching the check mark inserted by client for appropiate conditions

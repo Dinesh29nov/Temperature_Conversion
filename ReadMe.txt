@@ -19,6 +19,11 @@ Step 2: Run the file on the folder Client on other terminal.
 Step 3: One pop-up comes press okay to enter the temperature reading.
 Step 4: Enter the temperature in input field, cancel if you don't want 
 		to enter the value.
+Step 5: Make sure you enter the unit of temperature for getting proper output i.e., K or k for kelvin
+		R or r for rankine
+		F or f for fahrenheit
+		C or c for celsius, at the end of the value. If you dont put then webserver will handle
+		this case automatically.
 Step 5: After entering the temperature one pop-up window comes with URL.
 Step 6: Paste the URL into web browser to see the output.
 

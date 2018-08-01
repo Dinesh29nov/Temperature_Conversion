@@ -33,14 +33,15 @@ while(1): #infinite while loop for sending infinite reading of temperature
 	input=0
 	input=tkSimpleDialog.askstring("Value","Please enter temperature  ") # used because to handle the exception i.e, by mistake user not send string data  
 	r = requests.post("http://127.0.0.1:5000/Convert", data=input)
+	
 	if(input==None or input==''): #value is not null or not 
 		continue
-	input.replace(" ","") #eliminate whitespaces
-	if(input.isspace()): #check enter is only spaces
+	if(input.isspace() ): #check enter is only spaces
 		root = tk.Tk()  # to hide the root window 
 		root.withdraw()	
 		tkMessageBox.showinfo(title="Client-Warning!", message="Please enter some value instead of space :: REFRESH THE BROWSER TO SEE THE ERROR MESSAGE")
 		continue
+	input=input.replace(" ","") #eliminate whitespaces
 	if(input[-1]=='R' or input[-1]=='r'):
 		input=input[:-1]
 		root = tk.Tk()

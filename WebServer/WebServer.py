@@ -1,11 +1,8 @@
 #########      Necessary packagees        ############
 
-from flask import Flask, redirect, url_for
-from flask import jsonify
-from flask import Flask, render_template
-from flask.ext.socketio import SocketIO, emit
-from flask import Flask, Response, request
-import flask
+
+from flask import jsonify, Flask
+
 
 ######################################################
 

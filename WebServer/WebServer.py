@@ -90,8 +90,7 @@ def kelvin(para):
 
 ####### main function to operate the web server at local host (127.0.0.1) #######
 if __name__ == "__main__":
-    app.run(host="localhost") # Debug= True when u are in developer modeost="localhost") # Debug= True when u are in developer mode
-
+    app.run(host="localhost") # Debug= True when u are in developer mode
 
 
 

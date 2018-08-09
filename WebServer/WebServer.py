@@ -1,4 +1,4 @@
-#########      Necessary packagees        ############
+#########      Necessary packages        ############
 
 
 from flask import jsonify, Flask
@@ -44,13 +44,11 @@ def celsius(para):
         ranki=(float(para)+273.15)*(9.0/5.0)
         kel=  float(para) + 273.15
         return jsonify(rankine=ranki, kelvin=kel, fahrenheit=farh)
-        # "\"rankine\": {}, \"fahrenheit\": {}, \"kelvin\": {} " .format(ranki, farh, kel) ### printing the values on the web page
     try:
         farh=float(para) * (9.0/5.0) +32.0
         ranki=(float(para)+273.15)*(9.0/5.0)
         kel=  float(para) + 273.15
         return jsonify(rankine=ranki, kelvin=kel, fahrenheit=farh)
-        # "\"rankine\": {}, \"fahrenheit\": {}, \"kelvin\": {} " .format(ranki, farh, kel) ### printing the values on the web page
     except ValueError:
         return "Please enter some integer or real number !! "    
 
@@ -62,13 +60,11 @@ def rankine(para):
         fah= float(para) - 459.67    
         kel = float(para) * (5.0/9.0)   
         return jsonify(fahrenheit=fah, celsius=cel, kelvin=kel)
-        #"\"celsius\": {}, \"fahrenheit\": {}, \"kelvin\": {} " .format(cel, fah, kel) ### printing the values on the web page
     try:
         cel  = (float(para) - 491.67) * (5.0/9.0)   
         fah= float(para) - 459.67    
         kel = float(para) * (5.0/9.0)   
         return jsonify(fahrenheit=fah, celsius=cel, kelvin=kel)
-        #"\"celsius\": {}, \"fahrenheit\": {}, \"kelvin\": {} " .format(cel, fah, kel) ### printing the values on the web page
     except ValueError:
         return "Please enter some integer or real number !! "    
 
@@ -83,7 +79,6 @@ def kelvin(para):
         ranki=float(para)*(9.0/5.0)
               
         return jsonify(celsius=cel, fahrenheit=fah, rankine=ranki)
-        # "\"celsius\": {}, \"fahrenheit\": {}, \"rankine\": {} " .format(cel, fah, ranki)  ### printing the values on the web page
     try:
         cel = float(para) - float(273.15) 
         fah= (float(para))*(9.0/5.0)- 459.67

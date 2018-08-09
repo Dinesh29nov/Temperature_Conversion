@@ -5,9 +5,10 @@ The program works well on any system. There is no such system requirement but it
 Installation instructions:
 --------------------------
 
-* Any python version greater than or equal to 2.7
-* Install the packages mentioned on the top of a program
-  using pip install package-name
+* Any python version greater than or equal to 2.6
+* Install the packages mentioned on the top of a program using 
+  pip install package-name [for python 2]
+  pip3 install package-name [for python 3]
 
 Operating instructions:
 -----------------------

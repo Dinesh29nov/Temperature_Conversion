@@ -6,26 +6,21 @@ from flask import jsonify, Flask
 
 ######################################################
 
-
-
 #####################################################
 ################   SERVER SIDE       ################
 ################   MAIN LOGIC        ################
 #####################################################
-
-
-
 
 inputs=0
 vara=0
 app = Flask(__name__)
 #routing or mapping the URL
 @app.route('/', methods=['GET','POST']) # both redirect to same page i.e., home page
-@app.route('/convert', methods=['GET','POST'])
+@app.route('/convert/', methods=['GET','POST'])
 def convert():
     return "Temperature Conversion Program  " ### printing the values on the web page
 
-@app.route('/convert/fahrenheit/<para>', methods=['GET','POST'])  
+@app.route('/convert/fahrenheit/<para>/', methods=['GET','POST'])  
 def fahrenheit(para):
      ### conversion logic refer : https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature  ### 
     if(para.isdigit()): #checking the number is digit or not 
@@ -41,7 +36,7 @@ def fahrenheit(para):
     except ValueError: #handling exception if data is not float
         return "Please enter some integer or real number !! "    
 
-@app.route('/convert/celsius/<para>', methods=['GET','POST'])  
+@app.route('/convert/celsius/<para>/', methods=['GET','POST'])  
 def celsius(para):  
       ### conversion logic refer : https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature  ### 
     if(para.isdigit()):
@@ -59,7 +54,7 @@ def celsius(para):
     except ValueError:
         return "Please enter some integer or real number !! "    
 
-@app.route('/convert/rankine/<para>',methods=['GET','POST'])  
+@app.route('/convert/rankine/<para>/',methods=['GET','POST'])  
 def rankine(para):
       ### conversion logic refer : https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature  ### 
     if(para.isdigit()):
@@ -78,7 +73,7 @@ def rankine(para):
         return "Please enter some integer or real number !! "    
 
 
-@app.route('/convert/kelvin/<para>', methods=['GET','POST'])  
+@app.route('/convert/kelvin/<para>/', methods=['GET','POST'])  
 def kelvin(para):
       ### conversion logic refer : https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature  ### 
 
@@ -100,4 +95,16 @@ def kelvin(para):
 
 ####### main function to operate the web server at local host (127.0.0.1) #######
 if __name__ == "__main__":
-    app.run(host="localhost") # Debug= True when u are in developer mode
+    app.run(host="localhost") # Debug= True when u are in developer modeost="localhost") # Debug= True when u are in developer mode
+
+
+
+
+
+
+
+
+
+
+
+
